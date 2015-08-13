@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\Recovery\BiometrixIDSolProxy\Bin\BiometrixIdSolProxyLib.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93DB2F58-CD91-49B0-94CC-A9646A94F46F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>BiometrixIdSolProxyLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>BiometrixIDSolProxyLib</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog">
+      <HintPath>lib\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="IDS.IMS.Client">
+      <HintPath>lib\IDS.IMS.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="IDS.Common.BioAPI">
+      <HintPath>lib\IDS.Common.BioAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="IDS.IMS.Common">
+      <HintPath>lib\IDS.IMS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="AForge.Imaging">
+      <HintPath>lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="CommandTypes.cs" />
+    <Compile Include="FingerPositionsType.cs" />
+    <Compile Include="IDSolCommandResponse.cs" />
+    <Compile Include="IDSolCommandResult.cs" />
+    <Compile Include="IDSolRequestType.cs" />
+    <Compile Include="FingerPrintList.cs" />
+    <Compile Include="FingerPrintType.cs" />
+    <Compile Include="ImageUtil.cs" />
+    <Compile Include="IMSUtil.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
